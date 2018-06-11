@@ -1,17 +1,47 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="grid-container">
+
+
+    <ion-grid>
+
+      <button class="add-task" ion-button icon-start block text-capitalize color="light">
+        <ion-icon name="add"></ion-icon>
+        Add Task
+      </button>
+
+      <ion-row justify-content-end class="add-task">
+        <ion-col col-1>
+          <ion-item>
+            <ion-checkbox color="dark" checked="true"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-input type="text" placeholder="Write here"></ion-input>
+        </ion-col>
+
+        <ion-col col-auto>
+          <button ion-button icon-only>
+            <ion-icon name="star-outline"></ion-icon>
+          </button>
+
+          <button ion-button icon-only>
+            <ion-icon name="md-create"></ion-icon>
+          </button>
+        </ion-col>
+
+      </ion-row>
+
+
+      <label ion-button icon-start icon-end block text-capitalize color="light">
+
+          <ion-checkbox></ion-checkbox>
+          <ion-input type="text" placeholder="Write here"></ion-input>
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-icon name="md-create"></ion-icon>
+        </label>
+
+    </ion-grid>
+
+  </div>
 </ion-content>
