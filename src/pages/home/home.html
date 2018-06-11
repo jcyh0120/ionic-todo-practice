@@ -44,14 +44,14 @@
                   Deadline
                 </ion-item>
 
-                <ion-col>
+                <ion-col col-auto>
                   <ion-item margin-horizontal>
                     <ion-label>Date</ion-label>
                     <ion-datetime displayFormat="YYYY/MM/DD" pickerFormat="YYYY/MM/DD" [(ngModel)]="myDate"></ion-datetime>
                   </ion-item>
                 </ion-col>
 
-                <ion-col>
+                <ion-col col-auto>
                   <ion-item margin-horizontal>
                     <ion-label>Time</ion-label>
                     <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="myDateHour"></ion-datetime>
@@ -95,7 +95,7 @@
             </ion-col>
           </ion-row>
 
-          <ion-row class="" no-padding no-margin>
+          <ion-row class="" no-padding margin-top>
             <ion-col no-padding no-margin>
               <button no-padding no-margin ion-button icon-start block clear color="danger" text-capitalize class="bg-white">
                 <ion-icon name="close"></ion-icon>
