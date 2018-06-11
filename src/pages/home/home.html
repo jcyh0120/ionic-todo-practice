@@ -4,12 +4,12 @@
 
     <ion-grid>
 
-        <ion-row justify-content-end class="fix-width">
-          <button class="add-task" ion-button icon-start block text-capitalize color="light">
-            <ion-icon name="add"></ion-icon>
-            Add Task
-          </button>
-        </ion-row>
+      <ion-row justify-content-end class="fix-width">
+        <button class="add-task" ion-button icon-start block text-capitalize color="light">
+          <ion-icon name="add"></ion-icon>
+          Add Task
+        </button>
+      </ion-row>
 
       <ion-row justify-content-end class="task-card task-checkbox">
         <ion-col col-1 col-auto>
@@ -45,14 +45,14 @@
                 </ion-item>
 
                 <ion-col>
-                  <ion-item>
+                  <ion-item margin-horizontal>
                     <ion-label>Date</ion-label>
                     <ion-datetime displayFormat="YYYY/MM/DD" pickerFormat="YYYY/MM/DD" [(ngModel)]="myDate"></ion-datetime>
                   </ion-item>
                 </ion-col>
 
                 <ion-col>
-                  <ion-item>
+                  <ion-item margin-horizontal>
                     <ion-label>Time</ion-label>
                     <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="myDateHour"></ion-datetime>
                   </ion-item>
@@ -69,7 +69,13 @@
                   <ion-icon name="document" item-start></ion-icon>
                   File
                 </ion-item>
+
+                <button margin-horizontal ion-button icon-only>
+                    <ion-icon name="add"></ion-icon>
+                </button>
+
               </ion-row>
+
             </ion-col>
           </ion-row>
 
@@ -80,6 +86,11 @@
                   <ion-icon name="chatboxes" item-start></ion-icon>
                   Comment
                 </ion-item>
+
+                <ion-item margin-horizontal>
+                    <ion-textarea></ion-textarea>
+                </ion-item>
+
               </ion-row>
             </ion-col>
           </ion-row>
