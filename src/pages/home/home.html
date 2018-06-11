@@ -4,13 +4,15 @@
 
     <ion-grid>
 
-      <button class="add-task" ion-button icon-start block text-capitalize color="light">
-        <ion-icon name="add"></ion-icon>
-        Add Task
-      </button>
+        <ion-row justify-content-end class="fix-width">
+          <button class="add-task" ion-button icon-start block text-capitalize color="light">
+            <ion-icon name="add"></ion-icon>
+            Add Task
+          </button>
+        </ion-row>
 
-      <ion-row justify-content-end class="add-task">
-        <ion-col col-1>
+      <ion-row justify-content-end class="task-card task-checkbox">
+        <ion-col col-1 col-auto>
           <ion-item>
             <ion-checkbox color="dark" checked="true"></ion-checkbox>
           </ion-item>
@@ -29,18 +31,75 @@
             <ion-icon name="md-create"></ion-icon>
           </button>
         </ion-col>
-
       </ion-row>
 
+      <ion-row class="task-card task-edit-card">
+        <ion-col text-capitalize no-padding>
 
-      <label ion-button icon-start icon-end block text-capitalize color="light">
+          <ion-row>
+            <ion-col>
+              <ion-row padding-horizontal>
+                <ion-item no-lines class="bg-gray">
+                  <ion-icon name="calendar" item-start></ion-icon>
+                  Deadline
+                </ion-item>
 
-          <ion-checkbox></ion-checkbox>
-          <ion-input type="text" placeholder="Write here"></ion-input>
-          <ion-icon name="star-outline"></ion-icon>
-          <ion-icon name="md-create"></ion-icon>
-        </label>
+                <ion-col>
+                  <ion-item>
+                    <ion-label>Date</ion-label>
+                    <ion-datetime displayFormat="YYYY/MM/DD" pickerFormat="YYYY/MM/DD" [(ngModel)]="myDate"></ion-datetime>
+                  </ion-item>
+                </ion-col>
 
+                <ion-col>
+                  <ion-item>
+                    <ion-label>Time</ion-label>
+                    <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm" [(ngModel)]="myDateHour"></ion-datetime>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-row padding-horizontal>
+                <ion-item no-lines class="bg-gray">
+                  <ion-icon name="document" item-start></ion-icon>
+                  File
+                </ion-item>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-row padding-horizontal>
+                <ion-item no-lines class="bg-gray">
+                  <ion-icon name="chatboxes" item-start></ion-icon>
+                  Comment
+                </ion-item>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="" no-padding no-margin>
+            <ion-col no-padding no-margin>
+              <button no-padding no-margin ion-button icon-start block clear color="danger" text-capitalize class="bg-white">
+                <ion-icon name="close"></ion-icon>
+                Cancel
+              </button>
+            </ion-col>
+            <ion-col no-padding no-margin>
+              <button no-padding no-margin ion-button icon-start block text-capitalize>
+                <ion-icon name="add"></ion-icon>
+                Add
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
     </ion-grid>
 
   </div>
